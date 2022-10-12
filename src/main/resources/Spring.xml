@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context/
+  http://www.springframework.org/schema/context/spring-context.xsd">
+    <bean id="parenttriangle" class="org.kushick.javabrains.Triangle">
+        <property name="pointA" ref="pointA"/>
+    </bean>
+    <bean id="triangle" class="org.kushick.javabrains.Triangle" autowire="byName">
+        <!--        <property name="type" value="Equilateral"/>-->
+        <!--        <constructor-arg index="0" type="java.lang.String" value="Equilateral"/>-->
+        <!--        <constructor-arg index="1" type="int" value="20"/>-->
+        <!--        <property name="pointA" ref="ZeroPoint"/>-->
+        <!--        <property name="pointB" ref="Point2"/>-->
+        <!--        <property name="pointC" ref="Point3"/>-->
+
+        <!--      //for list-->
+        <!--        <property name="pointList">-->
+        <!--            <list>-->
+        <!--                <ref bean="ZeroPoint"/>-->
+        <!--                <ref bean="Point2"/>-->
+        <!--                <ref bean="Point3"/>-->
+        <!--            </list>-->
+        <!--        </property>-->
+
+    </bean>
+
+    <!--    <bean id="ZeroPoint" class="org.kushick.javabrains.Point">-->
+    <!--        <property name="x" value="0"/>-->
+    <!--        <property name="y" value="0"/>-->
+    <!--    </bean>-->
+
+    <!--    <bean id="Point2" class="org.kushick.javabrains.Point">-->
+    <!--        <property name="x" value="-20"/>-->
+    <!--        <property name="y" value="0"/>-->
+    <!--    </bean>-->
+    <!--    <bean id="Point3" class="org.kushick.javabrains.Point">-->
+    <!--        <property name="x" value="20"/>-->
+    <!--        <property name="y" value="0"/>-->
+    <!--    </bean>-->
+    <bean id="pointA" class="org.kushick.javabrains.Point">
+        <property name="x" value="0"/>
+        <property name="y" value="0"/>
+    </bean>
+
+    <bean id="pointB" class="org.kushick.javabrains.Point">
+        <property name="x" value="-20"/>
+        <property name="y" value="0"/>
+    </bean>
+    <bean id="pointC" class="org.kushick.javabrains.Point">
+        <property name="x" value="20"/>
+        <property name="y" value="0"/>
+    </bean>
+
+
+</beans>
